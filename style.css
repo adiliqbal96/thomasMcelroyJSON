@@ -1,0 +1,135 @@
+/* ---------- Color Variables ---------- */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --green: #32a852;
+  --blue: #357edd;
+  --gray: #d1d5db;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+header {
+  background-color: var(--green);
+  padding: 1em;
+  text-align: center;
+  color: var(--white);
+}
+
+.dialog-grid {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* ---------- Switch toggle ---------- */
+.switch {
+  display: flex;
+  border-radius: 9999px;
+  height: 2rem;
+  width: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.switch__input {
+  display: none;
+}
+
+.switch__circle {
+  border-radius: 9999px;
+  width: 2rem;
+  background-color: var(--white);
+}
+
+.switch--on {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  justify-content: flex-end;
+}
+
+.switch--off {
+  background-color: var(--gray);
+  border: 1px solid var(--gray);
+}
+
+.switch--off .switch__circle {
+  border: 1px solid var(--gray);
+}
+
+/* ---------- grid container styling ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* ---------- grid item styling ---------- */
+.grid-item {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  box-shadow: 0 8px 16px 0 var(--green);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-item p {
+  margin: 0.3em 0;
+  font-size: 1.1em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
