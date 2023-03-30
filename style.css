@@ -27,7 +27,6 @@ body {
 
 header {
   background-color: var(--green);
-  padding: 1em;
   text-align: center;
   color: var(--white);
   font-size: 2.5em;
@@ -102,8 +101,9 @@ header {
 
 /* ---------- dialog styling ---------- */
 #dialog-character {
-  width: 66.66%; /* 2/3 of the screen width */
-  height: 66.66%; /* 2/3 of the screen height */
+  width: 90%; /* Set width to 90% */
+  max-width: 800px; /* Set max-width to 800px */
+  height: 80%; /* Set height to auto */
   position: fixed;
   left: 50%;
   top: 50%;
@@ -113,6 +113,10 @@ header {
   border-radius: 15px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   z-index: 10; /* Set z-index for the dialog */
+  padding: 2em; /* Add padding */
+  background-color: var(--white); /* Add background color */
+  box-sizing: border-box; /* Add box-sizing */
+  z-index: 100;
 }
 
 #dialog-character #dialog-img {
