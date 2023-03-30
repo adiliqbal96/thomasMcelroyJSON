@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>SOUTH-PARK APPLICATION</header>
-
+    <header>
+      SOUTH-PARK APPLICATION
+      <div id="sort-container">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="name">Name</option>
+          <option value="age">Age</option>
+          <!-- Add more sorting options here -->
+        </select>
+      </div>
+    </header>
     <main>
       <section id="characters" class="grid-container">
-        <dialog id="dialog-character">
+        <dialog id="dialog-character" class="hidden">
           <h2 id="dialog-name"></h2>
           <img id="dialog-img" src="" />
           <p id="dialog-nickname"></p>
@@ -27,9 +36,7 @@
           <p id="dialog-episodes"></p>
           <p id="dialog-appearances"></p>
           <p id="dialog-firstAppearance"></p>
-          <form method="dialog">
-            <button>Close</button>
-          </form>
+          <button class="close">Close</button>
         </dialog>
       </section>
     </main>
